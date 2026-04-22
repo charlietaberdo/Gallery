@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | BuildPro Construction</title>
+    <meta name="description" content="Modern construction company dashboard. View ongoing projects, services, and client portal. Building the future with excellence.">
+    <meta name="keywords" content="construction, projects, dashboard, BuildPro, civil engineering">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- Top Header Banner -->
+    <header class="top-banner">
+        <div class="carousel">
+            <img src="workplace1.jpg" alt="Construction site with cranes" class="carousel-img active">
+            <img src="workplace2.jpg" alt="Team collaboration on site" class="carousel-img">
+            <img src="workplace3.jpg" alt="Machinery and workplace" class="carousel-img">
+            <img src="workplace4.jpg" alt="Project progress" class="carousel-img">
+            <img src="workplace5.jpg" alt="Meeting and planning" class="carousel-img">
+        </div>
+        <nav class="nav-bar">
+            <div class="hamburger" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="overlay">
+            <h1>Gallery</h1>
+            <p>CICJ General Construction and Building Maintenance Inc. established 2010
+</p>
+        </div>
+    </header>
+
+    <!-- Main Content: 3 Cards -->
+    <main class="cards-container">
+        <section class="card ongoing">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <h2>Ongoing Projects</h2>
+            <div class="stats">
+                <div class="stat"><span>12</span> Active Sites</div>
+                <div class="stat"><span>78%</span> Progress</div>
+                <div class="stat"><span>45</span> Team Members</div>
+            </div>
+        </section>
+        <section class="card services">
+            <i class="fas fa-cogs icon"></i>
+            <h2>Services</h2>
+            <ul>
+                <li><i class="fas fa-home"></i> Residential</li>
+                <li><i class="fas fa-building"></i> Commercial</li>
+                <li><i class="fas fa-hammer"></i> Renovation</li>
+                <li><i class="fas fa-road"></i> Infrastructure</li>
+            </ul>
+        </section>
+        <section class="card client">
+            <i class="fas fa-user-tie icon"></i>
+            <h2>Client Dashboard</h2>
+            <div class="links">
+                <a href="#" class="link-btn">View Reports</a>
+                <a href="#" class="link-btn">Invoices</a>
+                <a href="#" class="link-btn">Timelines</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lower CTA Banner -->
+    <section class="cta-banner">
+        <h2>Request a Quote for Your Next Project</h2>
+        <button class="cta-btn">Get Started</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="company logo.png" alt="BuildPro Construction Logo" class="logo">
+            <div class="contact">
+               
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="cert-badge">
+            <i class="fas fa-certificate"></i> Certified Builders
+        </div>
+    </footer>
+
+    <script>
+        // Carousel Rotation
+        let currentImg = 0;
+        const imgs = document.querySelectorAll('.carousel-img');
+        setInterval(() => {
+            imgs[currentImg].classList.remove('active');
+            currentImg = (currentImg + 1) % imgs.length;
+            imgs[currentImg].classList.add('active');
+        }, 4000);
+
+        // Mobile Nav Toggle
+        function toggleNav() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
